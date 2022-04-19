@@ -14,8 +14,10 @@ alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles exce
 alias push='~/push'
 alias nn='~/notes/nn'
 alias wpm='python ~/type.py'
+alias tdn='python ~/todo.py'
+alias tdf='~/.todo_folder'
 
-PS1='$(__git_ps1 "\[\033[36m\][%s] ")\[\033[00m\]\W \[\033[33m\]>\[\033[32m\]>\[\033[35m\]>\[\033[00m\]  '
+PS1='$(__git_ps1 "\[\033[36m\][%s] ")\[\033[00m\]\W \[\033[32m\]#\[\033[35m\]#\[\033[00m\] '
 
 #------------------------------------------------------------
 
