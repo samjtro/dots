@@ -10,6 +10,8 @@
 " properly set to work with the Vim-related packages.
 runtime! archlinux.vim
 
+colorscheme dogrun
+
 " If you prefer the old-style vim functionalty, add 'runtime! vimrc_example.vim'
 " Or better yet, read /usr/share/vim/vim80/vimrc_example.vim or the vim manual
 " and configure vim to your own liking!
@@ -37,12 +39,11 @@ set incsearch
 set ignorecase
 set smartcase
 set showmatch
-colorscheme gruvbox
 
 set statusline=
-set statusline+=\ %F\ %M\ %Y\ %R
+set statusline+=\ %f\ %M\ %R
 set statusline+=%=
-set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+set statusline+=\ [%Y]\ %l\:\%c\ %p%%
 set laststatus=2
 
 
