@@ -11,14 +11,14 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias push='~/push'
-alias nn='~/notes/nn'
-alias wpm='python3 ~/type.py'
-alias tdn='python3 ~/todo.py'
-alias tdf='~/.todo_folder'
-alias z='~/zet/zet.bash'
+alias push='~/scripts/push'
+alias nn='~/scripts/nn'
+alias wpm='python3 ~/scripts/type.py'
+alias tdn='python3 ~/scripts/todo.py'
+alias tdf='~/scripts/.todo_folder'
+alias z='~/scripts/zet'
 alias run='docker run -it --rm'
-alias clone='~/clone.bash'
+alias clone='~/scripts/clone'
 
 PS1='$(__git_ps1 "\[\033[36m\][%s] ")\[\033[00m\]\W \[\033[32m\]#\[\033[35m\]#\[\033[00m\] '
 

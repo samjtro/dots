@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read uI
+mkdir "todo/${uI}"
+echo "created todo directory ${uI}"
