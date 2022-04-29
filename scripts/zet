@@ -2,24 +2,18 @@
 
 dt=$(date +%Y%m%d%H%M%S)
 
-echo "new|existing dir"
-read dir
-
-if [[ ! -d $HOME/zet/zets/${dir} ]]
+if [[ ! -d $HOME/zet/$1 ]]
 then
-	mkdir $HOME/zet/zets/${dir}
+	mkdir $HOME/zet/$1
 fi
 
-echo "name your zet"
-read name
+mkdir $HOME/zet/$1/$2-${dt}
+touch $HOME/zet/$1/$2-${dt}/README.md
 
-mkdir $HOME/zet/zets/${dir}/${name}-${dt}
-touch $HOME/zet/zets/${dir}/${name}-${dt}/README.md
-
-echo "vim into your new zet?"
+echo "vi zet/$1/$2-${dt}"
 read yn
 
-if [[ yn != 'n' ]]
+if [[ yn -ne "n" ]]
 then
-	vim $HOME/zet/zets/${dir}/${name}-${dt}/README.md
+	vi $HOME/zet/$1/$2-${dt}/README.md
 fi

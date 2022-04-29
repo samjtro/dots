@@ -20,6 +20,8 @@ alias z='~/scripts/zet'
 alias run='docker run -it --rm'
 alias clone='~/scripts/clone'
 alias kctl='minikube kubectl --'
+alias t='touch'
+alias mkd='mkdir'
 
 PS1='\[\033[31m\]\e[3m$(free_mem)\e[23m \[\033[00m\][\[\033[33m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]][\[\033[36m\]\W\[\033[00m\]] $(__git_ps1 "on branch \[\033[36m\]%s")\n  \[\033[32m\]λ\[\033[35m\]λ\[\033[00m\] '
 
