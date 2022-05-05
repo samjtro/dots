@@ -1,6 +1,5 @@
-#
-# ~/.bashrc
-#
+# welcome!
+
 
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
