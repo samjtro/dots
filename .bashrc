@@ -1,5 +1,6 @@
-# welcome!
-
+#
+# ~/.bashrc
+#
 
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -24,7 +25,7 @@ alias t='touch'
 alias m='mkdir'
 alias o='/home/sam/go/bin/o'
 
-PS1='┌\[\033[31m\]\e[3m$(free_mem)\e[23m \[\033[00m\][\[\033[33m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]][\[\033[36m\]\W\[\033[00m\]] $(__git_ps1 "on branch \[\033[36m\]%s")\n└\[\033[32m\]ψ\[\033[35m\]ψ\[\033[00m\] '
+PS1='┌[\[\033[33m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]] at [\[\033[36m\]\W\[\033[00m\]] $(__git_ps1 "on \[\033[36m\]%s")\n└\[\033[32m\]ψ\[\033[35m\]ψ\[\033[00m\] '
 
 # FUNCTIONS
 
