@@ -24,6 +24,7 @@ alias kctl='minikube kubectl --'
 alias t='touch'
 alias m='mkdir'
 alias o='/home/sam/go/bin/o'
+alias v='vim'
 
 # yellow = 33
 # green = 32
