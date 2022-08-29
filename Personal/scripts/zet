@@ -1,5 +1,4 @@
 #!/bin/bash
-
 dt=$(date +%Y%m%d%H%M%S)
 
 if [[ ! -d $HOME/zet/$1 ]]

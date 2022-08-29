@@ -1,0 +1,12 @@
+#!/bin/bash
+if [ $1 = "c" ]; then
+	if [ -z $2 ]; then
+		javac src/*.java -d bin
+	else 
+		if [ -z $3 ]; then
+			javac $2/*.java -d bin
+		else
+			javac $2/*.java -d $3
+		fi
+	fi
+fi

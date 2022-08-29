@@ -1,0 +1,4 @@
+#!/bin/bash
+read uI
+git tag ${uI}
+git push origin ${uI}
