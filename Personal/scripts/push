@@ -1,6 +1,6 @@
 #!/bin/bash
 read uI
+
 git add .
 git commit -m "${uI}"
 git push
-

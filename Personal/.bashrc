@@ -9,10 +9,12 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 [[ $- != *i* ]] && return
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
 
+alias ...='cd ../..;pwd'
+alias ....='cd ../../..;pwd'
 alias ls='ls --color=auto'
-alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
-alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
-alias push='~/scripts/push'
+alias l='ls -lav --color=auto'   # show long listings
+alias push='git add . && git commit && git push'
+alias tag='~/scripts/tag'
 alias nn='~/scripts/nn'
 alias wpm='python3 ~/scripts/type.py'
 alias tdn='python3 ~/scripts/todo.py'
@@ -25,13 +27,14 @@ alias t='touch'
 alias m='mkdir'
 alias o='/home/sam/go/bin/o'
 alias v='vim'
+alias j='~/scripts/java-shortcuts'
 
 # yellow = 33
 # green = 32
 # purple = 35
 # red = 31
 
-PS1='┌[\[\033[32m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]] at [\[\033[31m\]\W\[\033[00m\]] $(__git_ps1 "on \[\033[36m\]%s")\n└\[\033[32m\]>\[\033[35m\]>\[\033[00m\] '
+PS1='┌\[\033[32m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]:\[\033[31m\]\W\[\033[00m\]\n└\$ '
 
 # FUNCTIONS
 

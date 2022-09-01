@@ -1,12 +1,12 @@
 #!/bin/bash
-sudo bash -c "ufw allow OpenSSH && ufw enable"
-ufw status
-
+sudo bash -c "ufw allow OpenSSH && ufw enable && ufw status"
 sudo bash -c "apt-get update && apt-get upgrade && apt-get install vim sudo curl git golang-go build-essentials"
-sudo reboot
 
 read -p "Would you like to setup SSH now?" STATUS
 
-if [ $STATUS = "yes" ]; then
-        ./linux-ssh-setup.sh
+if [ ${STATUS} = "yes" ]; then
+        curl https://raw.githubusercontent.com/samjtro/dotfiles/main/Professional/scripts/linux-ssh-setup >> linux-ssh-setup
+        ./linux-ssh-setup
 fi
+
+sudo reboot

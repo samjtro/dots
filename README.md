@@ -1,9 +1,9 @@
 # dotfiles
 
-what this all looks like:
+would not recommend using other people's dotfiles, but if you wanna use mine feel free. 
 
-![Hello, World](https://github.com/samjtro/dotfiles/blob/main/bashrc.png)
+```
+chmod +x setup && ./setup
+```
 
-arch users attemting to acquire the git-prompt.sh file:
-
-"cp /usr/share/git/completion/git-prompt.sh ~/git-prompt.sh"
+good to go!

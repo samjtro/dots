@@ -1,5 +1,6 @@
 #!/bin/bash
 read uI
 touch "/home/sam/notes/${uI}.md"
+
 echo "created new note ${uI}"
 micro "/home/sam/notes/${uI}.md"
