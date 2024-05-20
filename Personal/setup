@@ -1,4 +1,5 @@
 #!/bin/bash
 
 chmod +x scripts
+mv git-prompt.sh ~/
 cp -r .vim .bashrc .tmux.conf .vimrc scripts ~/
