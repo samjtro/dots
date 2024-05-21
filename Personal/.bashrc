@@ -13,21 +13,26 @@ alias ...='cd ../..;pwd'
 alias ....='cd ../../..;pwd'
 alias ls='ls --color=auto'
 alias l='ls -lav --color=auto'   # show long listings
-alias push='git add . && git commit && git push'
-alias tag='~/scripts/tag'
 alias nn='~/scripts/nn'
 alias wpm='python3 ~/scripts/type.py'
 alias tdn='python3 ~/scripts/todo.py'
 alias tdf='~/scripts/.todo_folder'
 alias z='~/scripts/zet'
 alias run='docker run -it --rm'
-alias clone='~/scripts/clone'
 alias kctl='minikube kubectl --'
 alias t='touch'
 alias m='mkdir'
 alias o='/home/sam/go/bin/o'
 alias v='vim'
 alias j='~/scripts/java-shortcuts'
+
+# git aliases
+
+alias push='~/scripts/git/push'
+alias tag='~/scripts/git/tag'
+alias clone='~/scripts/git/clone'
+alias ptr='~/scripts/git/ptr'
+alias rollback='~/scripts/git/rollback'
 
 # yellow = 33
 # green = 32

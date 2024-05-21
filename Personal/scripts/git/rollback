@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git reset --hard $1
+git push -f origin $2

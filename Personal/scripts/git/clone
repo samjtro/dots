@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -eq 3 ]
+then
+	git clone -b --single-branch $3 https://github.com/$1/$2
+else
+	git clone https://github.com/$1/$2
+fi
