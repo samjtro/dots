@@ -9,15 +9,24 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 [[ $- != *i* ]] && return
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
 
-alias ...='cd ../..;pwd'
-alias ....='cd ../../..;pwd'
-alias ls='ls --color=auto'
-alias l='ls -lav --color=auto'   # show long listings
+# aliases for my programs
+alias vp="~/scripts/vplug"
 alias nn='~/scripts/nn'
 alias wpm='python3 ~/scripts/type.py'
 alias tdn='python3 ~/scripts/todo.py'
 alias tdf='~/scripts/.todo_folder'
 alias z='~/scripts/zet'
+alias push='~/scripts/git/push'
+alias tag='~/scripts/git/tag'
+alias clone='~/scripts/git/clone'
+alias ptr='~/scripts/git/ptr'
+alias rollback='~/scripts/git/rollback'
+
+# misc aliases
+alias ...='cd ../..;pwd'
+alias ....='cd ../../..;pwd'
+alias ls='ls --color=auto'
+alias l='ls -lav --color=auto'
 alias run='docker run -it --rm'
 alias kctl='minikube kubectl --'
 alias t='touch'
@@ -26,14 +35,6 @@ alias mp='mkdir -p'
 alias o='/home/sam/go/bin/o'
 alias v='vim'
 alias j='~/scripts/java-shortcuts'
-
-# git aliases
-
-alias push='~/scripts/git/push'
-alias tag='~/scripts/git/tag'
-alias clone='~/scripts/git/clone'
-alias ptr='~/scripts/git/ptr'
-alias rollback='~/scripts/git/rollback'
 
 # yellow = 33
 # green = 32
