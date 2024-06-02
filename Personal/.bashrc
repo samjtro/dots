@@ -22,6 +22,7 @@ alias run='docker run -it --rm'
 alias kctl='minikube kubectl --'
 alias t='touch'
 alias m='mkdir'
+alias mp='mkdir -p'
 alias o='/home/sam/go/bin/o'
 alias v='vim'
 alias j='~/scripts/java-shortcuts'
@@ -58,3 +59,4 @@ free_mem()
 # alias pacdiff=eos-pacdiff
 ################################################################################
 
+. "$HOME/.cargo/env"
