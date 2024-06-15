@@ -1,0 +1,19 @@
+#!/bin/bash
+dt=$(date %m%d%H%M%S)
+y=$(date +%Y)
+
+if [[ ! -d $HOME/zets/$y/$1 ]]
+then
+	mkdir -p $HOME/zets/$y/$1
+fi
+
+mkdir $HOME/zets/$y/$1/$dt-$2
+touch $HOME/zets/$y/$1/$dt-$2/README.md
+
+echo "vim zets/$y/$1/$dt-$2/README.md ?"
+read yn
+
+if [[ yn -ne "n" ]]
+then
+	vim $HOME/zets/$y/$1/$dt-$2/README.md
+fi
