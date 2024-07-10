@@ -1,0 +1,5 @@
+#!/bin/bash
+# create and push tag
+# usage: tag tagname
+git tag $1
+git push origin $1

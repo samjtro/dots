@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# clone a github repo
+# usage: clone author reponame (optional: branchname)
 if [ $# -eq 3 ]
 then
 	git clone -b --single-branch $3 https://github.com/$1/$2

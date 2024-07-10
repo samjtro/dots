@@ -9,22 +9,25 @@ export GIT_PS1_SHOWDIRTYSTATE=1
 [[ $- != *i* ]] && return
 [[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
 
-# aliases for my programs
-alias vp="~/scripts/vplug"
+# my scripts
 alias nn='~/scripts/nn'
 alias wpm='python3 ~/scripts/type.py'
 alias tdn='python3 ~/scripts/todo.py'
 alias tdf='~/scripts/.todo_folder'
 alias z='~/scripts/zet'
-alias push='~/scripts/git/push'
+
+# git aliases
+alias push='git add .; git commit; git push'
 alias tag='~/scripts/git/tag'
 alias clone='~/scripts/git/clone'
 alias ptr='~/scripts/git/ptr'
 alias rollback='~/scripts/git/rollback'
 
 # misc aliases
-alias ...='cd ../..;pwd'
-alias ....='cd ../../..;pwd'
+alias n="nvim"
+alias enc="~/.encore/bin/encore"
+alias ...='cd ../..; pwd'
+alias ....='cd ../../..; pwd'
 alias ls='ls --color=auto'
 alias l='ls -lav --color=auto'
 alias run='docker run -it --rm'
@@ -35,6 +38,8 @@ alias mp='mkdir -p'
 alias o='/home/sam/go/bin/o'
 alias v='vim'
 alias j='~/scripts/java-shortcuts'
+alias pomo='/usr/local/bin/tmux-pomodoro'
+alias upgrade='sudo apt update; sudo apt upgrade; sudo apt autoremove'
 
 # yellow = 33
 # green = 32
@@ -61,3 +66,12 @@ free_mem()
 ################################################################################
 
 . "$HOME/.cargo/env"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/go/bin:$PATH"
+export CC="clang"
+export CFLAGS="-fsanitize=signed-integer-overflow -fsanitize=undefined -ggdb3 -O0 -std=c11 -Wall -Werror -Wextra -Wno-sign-compare -Wno-unused-parameter -Wno-unused-variable -Wshadow"
+export LDLIBS="-lcrypt -lcs50 -lm"

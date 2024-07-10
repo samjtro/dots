@@ -1,9 +1,0 @@
-#!/bin/bash
-read -p "Public Key:  " PUBKEY
-
-if [[ ! -d $HOME/.ssh ]]; then
-	mkdir $HOME/.ssh
-fi
-
-touch $HOME/.ssh/authorized_keys
-echo ${PUBKEY} > $HOME/.ssh/authorized_keys

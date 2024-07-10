@@ -1,5 +1,0 @@
-#!/bin/bash
-
-chmod +x scripts
-mv git-prompt.sh ~/
-cp -r .bashrc .tmux.conf scripts ~/

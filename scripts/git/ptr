@@ -1,3 +1,4 @@
 #!/bin/bash
-
+# push tag release
+# usage: ptr tagname
 git add .; git commit; git push; git tag $1; git push origin $1; gh release create
