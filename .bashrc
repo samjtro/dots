@@ -1,20 +1,10 @@
-#
-# ~/.bashrc
-#
-
-. ~/git-prompt.sh
-export GIT_PS1_SHOWDIRTYSTATE=1
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-[[ -f ~/.welcome_screen ]] && . ~/.welcome_screen
-
 # my scripts
 alias nn='~/scripts/nn'
 alias wpm='python3 ~/scripts/type.py'
 alias tdn='python3 ~/scripts/todo.py'
 alias tdf='~/scripts/.todo_folder'
 alias z='~/scripts/zet'
+alias removenvim='rm -rf ~/.config/nvim; rm -rf ~/.cache/nvim; rm -rf ~/.local/state/nvim; rm -rf ~/.local/share/nvim'
 
 # git aliases
 alias push='git add .; git commit; git push'
@@ -22,8 +12,10 @@ alias tag='~/scripts/git/tag'
 alias clone='~/scripts/git/clone'
 alias ptr='~/scripts/git/ptr'
 alias rollback='~/scripts/git/rollback'
+alias reclone='rm -rf $2; clone $1 $2'
 
 # misc aliases
+alias mbd='sudo dd if=$1 of=$2 bs=1m'
 alias n="nvim"
 alias enc="~/.encore/bin/encore"
 alias ...='cd ../..; pwd'
@@ -41,35 +33,18 @@ alias j='~/scripts/java-shortcuts'
 alias pomo='/usr/local/bin/tmux-pomodoro'
 alias upgrade='sudo apt update; sudo apt upgrade; sudo apt autoremove'
 
-# yellow = 33
-# green = 32
-# purple = 35
-# red = 31
-
-PS1='┌\[\033[32m\]\u\[\033[00m\]@\[\033[35m\]\H\[\033[00m\]:\[\033[31m\]\W\[\033[00m\]\n└\$ '
-
-# FUNCTIONS
-
-free_mem()
-{
-	awk '/MemFree/{print $2}' /proc/meminfo
-}
-
-#------------------------------------------------------------
-
-## Aliases for the functions above.
-## Uncomment an alias if you want to use it.
-##
-
-# alias ef='_open_files_for_editing'     # 'ef' opens given file(s) for editing
-# alias pacdiff=eos-pacdiff
-################################################################################
+# . ~/git-prompt.sh
+# export GIT_PS1_SHOWDIRTYSTATE=1
+# → ➵ ➛ ➲ ➤
+# profiles:
+# PS1='\u @ \H : \W ➲ '
+PS1='\w ➲ '
+PS2='➲ '
 
 . "$HOME/.cargo/env"
-
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 export PATH=$HOME/.local/bin:$PATH
 export PATH="$HOME/go/bin:$PATH"
 export CC="clang"
