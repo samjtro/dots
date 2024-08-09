@@ -1,5 +1,8 @@
 #!/bin/bash
-
-curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh" > ~/git-prompt.sh
+#curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh" > ~/git-prompt.sh
 chmod +x scripts
-cp -r .bashrc .tmux.conf scripts ~/
+if [-n $1]; then
+    cp -r .bashrc-mac ~/.bashrc
+    cp -r .tmux.conf scripts ~/
+else
+    cp -r .bashrc .tmux.conf scripts ~/
