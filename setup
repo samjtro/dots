@@ -1,14 +1,12 @@
 #!/bin/bash
+
 #curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh" > ~/git-prompt.sh
 chmod +x scripts
+
 if ls $HOME/.config/nvim; then
     git -C $HOME/.config/nvim pull
 else
     git clone https://github.com/samjtro/nvim $HOME/.config/nvim
 fi
-if [ -n $1 ]; then
-    cp -r .bashrc-mac $HOME/.bashrc
-    cp -r .tmux.conf scripts $HOME/
-else
-    cp -r .bashrc .tmux.conf scripts $HOME/
-fi
+
+cp -r .bashrc .tmux.conf scripts $HOME/
