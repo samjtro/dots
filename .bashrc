@@ -3,7 +3,7 @@
 # → ➵ ➛ ➲ ➤
 # profiles:
 # PS1='\u @ \H : \W ➲ '
-PS1='\w ➲ '
+PS1='\u @ \H : \w\n➲ '
 PS2='➲ '
 
 # my scripts
@@ -65,3 +65,4 @@ esac
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH=$BUN_INSTALL/bin:$PATH
+
