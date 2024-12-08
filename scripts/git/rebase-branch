@@ -1,0 +1,2 @@
+#!/bin/bash
+git rebase origin/$1; git push --force-with-lease

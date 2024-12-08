@@ -1,0 +1,4 @@
+#!/bin/bash
+pnpm create next-app $1 --ts --app --tailwind
+cd $1
+pnpm dlx kirimase@latest init
