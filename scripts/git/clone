@@ -1,9 +1,16 @@
 #!/bin/bash
 # clone a github repo
-# usage: clone author reponame (optional: branchname)
-if [ $# -eq 3 ]
-then
-	git clone -b --single-branch $3 https://github.com/$1/$2
+# usage: clone [https | ssh] [authorName] [repoName] (optional: branchName)
+if [ $# -eq 3 ]; then
+    if [ "$1" = "https" ]; then
+        git clone -b --single-branch $3 https://github.com/$2
+    else
+        git clone -b --single-branch $3 ssh://git@github.com/$2.git
+    fi
 else
-	git clone https://github.com/$1/$2
+    if [ "$1" = "https" ]; then
+        git clone https://github.com/$2
+    else
+        git clone ssh://git@github.com/$2.git
+    fi
 fi
